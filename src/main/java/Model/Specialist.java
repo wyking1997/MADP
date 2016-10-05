@@ -26,4 +26,8 @@ public class Specialist implements Person {
                  + " ||| atribute String name = " + name + " ||| atribute int age = " + age
                  + " ||| atribute String speciality = " + speciality;
     }
+
+    public String getName(){
+        return this.name;
+    };
 }

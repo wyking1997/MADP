@@ -5,4 +5,5 @@ package Model;
  */
 public interface Person {
     boolean hasPresented();
+    String getName();
 }

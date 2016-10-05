@@ -27,4 +27,7 @@ public class Student implements Person {
                 + " ||| atribute String name = " + name + " ||| atribute int age = " + age
                 + "||| atribute String faculty = " + faculty;
     }
+    public String getName(){
+        return this.name;
+    };
 }
