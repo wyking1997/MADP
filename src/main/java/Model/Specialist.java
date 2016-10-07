@@ -16,15 +16,19 @@ public class Specialist implements Person {
         this.speciality = speciality;
     }
 
+    public Person getCopy(){
+        return new Specialist(presentation, name, age, speciality);
+    }
+
     public boolean hasPresented(){
         return presentation;
     }
 
     @Override
     public String toString(){
-        return "Specialist class ||| atribute boolean presentation = " + presentation
-                 + " ||| atribute String name = " + name + " ||| atribute int age = " + age
-                 + " ||| atribute String speciality = " + speciality;
+        return "Specialist class | presentation = " + presentation
+                 + " | Name = " + name + " | Age = " + age
+                 + " | Speciality = " + speciality;
     }
 
     public String getName(){

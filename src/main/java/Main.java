@@ -9,7 +9,9 @@
 
  */
 
-import Model.*;
+import Controller.Controller;
+import Repository.*;
+import View.View;
 
 public class Main {
 
@@ -17,5 +19,10 @@ public class Main {
 
         System.out.println("Heloo");
 
+        int capacity = 1;
+        Repository repo = new MyRepository(capacity);
+        Controller c = new Controller(repo);
+        View v = new View(c);
+        v.start();
     }
 }

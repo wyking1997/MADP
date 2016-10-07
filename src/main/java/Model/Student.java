@@ -17,15 +17,19 @@ public class Student implements Person {
         this.faculty = faculty;
     }
 
+    public Person getCopy(){
+        return new Student(presentation, name, age, faculty);
+    }
+
     public boolean hasPresented(){
         return presentation;
     }
 
     @Override
     public String toString(){
-        return "Student class ||| atribute boolean presentation = " + presentation
-                + " ||| atribute String name = " + name + " ||| atribute int age = " + age
-                + "||| atribute String faculty = " + faculty;
+        return "Student class | Presentation = " + presentation
+                + " | Name = " + name + " | Age = " + age
+                + "| Faculty = " + faculty;
     }
     public String getName(){
         return this.name;

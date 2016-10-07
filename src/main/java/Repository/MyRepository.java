@@ -9,13 +9,25 @@ public class MyRepository implements Repository {
 
     Person[] v;
     int last;
+    int capacity;
 
-    public MyRepository(){
-        v = new Person[100];
+    public MyRepository(int capacity){
+        this.capacity = capacity;
+        v = new Person[capacity];
         last = -1;
     }
 
+    public void resize(){
+        capacity *= 2;
+        Person[] a = new Person[capacity];
+        for (int i = 0; i <= last ; i++)
+            a[i] = v[i];
+        v = a;
+    }
+
     public void add(Person p){
+        if (capacity - 1 == last)
+            resize();
         last++;
         v[last] = p;
     };
@@ -31,8 +43,18 @@ public class MyRepository implements Repository {
     };
 
     public Person[] filter(){
-        return null;
+        Person[] w = new Person[last];
+        int i = -1;
+        for (Person p : v){
+            if (p != null && p.hasPresented())
+                w[++i] = p.getCopy();
+        }
+        return w;
     };
+
+    public Person[] getAll(){
+        return v;
+    }
 
     public boolean search(String name){
         for (Person p : v){

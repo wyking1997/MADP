@@ -17,15 +17,19 @@ public class Teacher implements Person {
         this.teaching = teaching;
     }
 
+    public Person getCopy(){
+        return new Teacher(presentation, name, age, teaching);
+    }
+
     public boolean hasPresented(){
         return presentation;
     }
 
     @Override
     public String toString(){
-        return "Teacher class ||| atribute boolean presentation = " + presentation
-                + " ||| atribute String name = " + name + " ||| atribute int age = " + age
-                + " ||| atrinute String teaching = " + teaching;
+        return "Teacher class | Presentation = " + presentation
+                + " | Name = " + name + " | Age = " + age
+                + " | Teaching = " + teaching;
     }
 
     public String getName(){

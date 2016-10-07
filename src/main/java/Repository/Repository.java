@@ -9,5 +9,6 @@ public interface Repository {
     void add(Person p);
     void remove(String name);
     Person[] filter();
+    Person[] getAll();
     boolean search(String name);
 }
