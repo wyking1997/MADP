@@ -17,8 +17,6 @@ public class Main {
 
     public static void main(String[] args){
 
-        System.out.println("Heloo");
-
         int capacity = 1;
         Repository repo = new MyRepository(capacity);
         Controller c = new Controller(repo);
